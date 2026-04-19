@@ -38,10 +38,10 @@ export function TrustSection() {
           <div className="grid gap-5 md:grid-cols-2">
             {trustItems.map((item) => (
               <div key={item.title} className="glass-card rounded-[1.75rem] p-7">
-                <h3 className="text-2xl font-semibold tracking-[-0.03em]">
+                <h3 className="text-2xl font-semibold tracking-[-0.03em] text-[#184144]">
                   {item.title}
                 </h3>
-                <p className="section-text mt-3">{item.text}</p>
+                <p className="section-text-dark mt-3">{item.text}</p>
               </div>
             ))}
           </div>

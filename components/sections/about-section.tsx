@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function AboutSection() {
   const qualifications = [
     "Platzhalter für Qualifikation / Heilpraktikerin / Therapeutin",
@@ -10,12 +12,14 @@ export function AboutSection() {
     <section id="praxis" className="section-space">
       <div className="container-shell">
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
-          <div className="image-placeholder min-h-[560px] w-full">
-            <div className="image-placeholder-label">
-              Platzhalter für Portraitbild:
-              professionelle Therapeutin, ruhig, kompetent, natürliches Licht,
-              editorial, vertrauenswürdig
-            </div>
+          <div className="image-frame">
+            <Image
+              src="/images/ueber-mich.jpg"
+              alt="Portrait der Therapeutin"
+              width={900}
+              height={1100}
+              className="h-[620px] w-full object-cover"
+            />
           </div>
 
           <div>
@@ -46,7 +50,7 @@ export function AboutSection() {
               {qualifications.map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl border border-[var(--border)] bg-[rgba(255,253,249,0.8)] px-4 py-4 text-sm"
+                  className="light-panel rounded-2xl px-4 py-4 text-sm text-[#2f5d60]"
                 >
                   {item}
                 </div>

@@ -49,14 +49,11 @@ export function FaqSection() {
 
           <div className="grid gap-4">
             {faqItems.map((item) => (
-              <div
-                key={item.question}
-                className="glass-card rounded-[1.6rem] p-6"
-              >
-                <h3 className="text-xl font-semibold tracking-[-0.03em]">
+              <div key={item.question} className="glass-card rounded-[1.6rem] p-6">
+                <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#184144]">
                   {item.question}
                 </h3>
-                <p className="section-text mt-3">{item.answer}</p>
+                <p className="section-text-dark mt-3">{item.answer}</p>
               </div>
             ))}
           </div>

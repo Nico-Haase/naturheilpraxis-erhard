@@ -46,13 +46,13 @@ export function ProcessSection() {
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
           {steps.map((step) => (
             <div key={step.number} className="glass-card rounded-[1.75rem] p-6">
-              <div className="mb-4 text-sm uppercase tracking-[0.22em] text-[var(--primary)]">
+              <div className="mb-4 text-sm uppercase tracking-[0.22em] text-[#2d666a]">
                 {step.number}
               </div>
-              <h3 className="text-2xl font-semibold tracking-[-0.03em]">
+              <h3 className="text-2xl font-semibold tracking-[-0.03em] text-[#184144]">
                 {step.title}
               </h3>
-              <p className="section-text mt-3 text-sm">{step.text}</p>
+              <p className="section-text-dark mt-3 text-sm">{step.text}</p>
             </div>
           ))}
         </div>

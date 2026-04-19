@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const services = [
   {
     number: "01",
     title: "Hormonanalyse",
+    image: "/images/hormonanalyse.png",
     text: "Eine strukturierte Betrachtung hormoneller Zusammenhänge – individuell ausgewertet, verständlich erklärt und therapeutisch sinnvoll eingeordnet.",
     points: [
       "Zyklusunregelmäßigkeiten",
@@ -15,6 +17,7 @@ const services = [
   {
     number: "02",
     title: "Ganzheitliche Blutanalyse",
+    image: "/images/blutanalyse.png",
     text: "Laborwerte werden nicht isoliert betrachtet, sondern in einen ganzheitlichen Zusammenhang gesetzt – mit Blick auf Regulation, Belastungen und Versorgung.",
     points: [
       "Müdigkeit",
@@ -26,6 +29,7 @@ const services = [
   {
     number: "03",
     title: "Pflanzliche Hormonregulierung",
+    image: "/images/pflanzliche-hormone.png",
     text: "Sanfte naturheilkundliche Begleitung mit ausgewählten pflanzlichen Ansätzen – verantwortungsvoll, individuell und alltagsnah.",
     points: [
       "hormonelle Dysbalancen",
@@ -56,27 +60,32 @@ export function ServicesSection() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           {services.map((service) => (
-            <div
-              key={service.title}
-              className="glass-card rounded-[2rem] p-8"
-            >
+            <div key={service.title} className="glass-card rounded-[2rem] p-8">
               <div className="mb-6 flex items-center justify-between">
-                <span className="rounded-full border border-[var(--border)] bg-white px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-[var(--muted)]">
+                <span className="rounded-full border border-[rgba(0,0,0,0.06)] bg-white px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-[#45686a]">
                   Leistung
                 </span>
-                <span className="text-sm text-[var(--muted)]">
-                  {service.number}
-                </span>
+                <span className="text-sm text-[#58777a]">{service.number}</span>
               </div>
 
-              <h3 className="text-3xl font-semibold tracking-[-0.03em]">
+              <div className="mb-6 overflow-hidden rounded-[1.3rem]">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={700}
+                  height={420}
+                  className="h-[220px] w-full object-cover"
+                />
+              </div>
+
+              <h3 className="text-3xl font-semibold tracking-[-0.03em] text-[#184144]">
                 {service.title}
               </h3>
 
-              <p className="section-text mt-4">{service.text}</p>
+              <p className="section-text-dark mt-4">{service.text}</p>
 
               <div className="mt-7">
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#56797b]">
                   Typische Themen
                 </p>
 
@@ -84,7 +93,7 @@ export function ServicesSection() {
                   {service.points.map((point) => (
                     <span
                       key={point}
-                      className="rounded-full border border-[var(--border)] bg-white px-3 py-2 text-sm"
+                      className="soft-chip"
                     >
                       {point}
                     </span>
@@ -92,11 +101,11 @@ export function ServicesSection() {
                 </div>
               </div>
 
-              <div className="mt-8 rounded-[1.5rem] bg-[rgba(85,107,93,0.06)] p-5">
-                <p className="text-sm font-medium">
+              <div className="mt-8 rounded-[1.5rem] bg-[rgba(129,216,208,0.14)] p-5">
+                <p className="text-sm font-medium text-[#184144]">
                   Nutzen für Patientinnen und Patienten
                 </p>
-                <p className="section-text mt-2 text-sm">
+                <p className="section-text-dark mt-2 text-sm">
                   Mehr Klarheit über mögliche Zusammenhänge und eine fundierte
                   Grundlage für die nächsten sinnvollen Schritte.
                 </p>
@@ -104,7 +113,7 @@ export function ServicesSection() {
 
               <Link
                 href="#kontakt"
-                className="premium-button mt-8 inline-block rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-white transition hover:bg-[var(--primary-dark)]"
+                className="premium-button mt-8 inline-block rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-[#143739] transition hover:bg-[var(--primary-dark)]"
               >
                 Termin anfragen
               </Link>
