@@ -14,7 +14,7 @@ export function AboutSection() {
         <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
           <div className="image-frame">
             <Image
-              src="/images/ueber-mich.jpg"
+              src="/images/ueber-mich.jpeg"
               alt="Portrait der Therapeutin"
               width={900}
               height={1100}
