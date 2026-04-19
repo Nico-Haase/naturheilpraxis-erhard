@@ -3,13 +3,13 @@ import { siteConfig } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[rgba(0,0,0,0.06)] bg-[rgba(245,239,229,0.95)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[rgba(255,255,255,0.35)] bg-[rgba(205,189,168,0.92)] backdrop-blur-xl shadow-[0_10px_30px_-20px_rgba(40,55,65,0.35)]">
       <div className="container-shell flex h-20 items-center justify-between">
         <Link href="/" className="flex flex-col leading-none">
-          <span className="text-[1.5rem] font-semibold tracking-[-0.03em] text-[#244447]">
+          <span className="text-[1.5rem] font-semibold tracking-[-0.04em] text-[#294046]">
             Naturheilpraxis Erhard
           </span>
-          <span className="mt-1 text-[0.68rem] uppercase tracking-[0.24em] text-[#5c7a7d]">
+          <span className="mt-1 text-[0.68rem] uppercase tracking-[0.24em] text-[#6f7c82]">
             Hormonbalance · Naturheilkunde · Ganzheitlich
           </span>
         </Link>
@@ -19,7 +19,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-[#4d6b6e] transition hover:text-[#1f3f42]"
+              className="text-sm text-[#445b62] transition hover:text-[#22363d]"
             >
               {item.label}
             </Link>
@@ -28,7 +28,7 @@ export function Header() {
 
         <Link
           href="#kontakt"
-          className="premium-button rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-medium text-[#143739] transition hover:bg-[var(--primary-dark)]"
+          className="premium-button rounded-full bg-[var(--primary)] px-5 py-3 text-sm font-semibold text-[#163739] transition hover:bg-[var(--primary-dark)]"
         >
           Termin vereinbaren
         </Link>

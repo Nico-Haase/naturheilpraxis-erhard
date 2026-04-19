@@ -10,23 +10,26 @@ const trustItems = [
 
 export function HeroSection() {
   return (
-    <section id="start" className="section-space relative overflow-hidden pt-12 md:pt-16 lg:pt-20">
+    <section
+      id="start"
+      className="section-space relative overflow-hidden pt-12 md:pt-16 lg:pt-20"
+    >
       <div className="hero-glow" />
 
-      <div className="container-shell grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="container-shell grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr]">
         <div className="relative z-10">
           <div className="eyebrow">
-            Naturheilpraxis für hormonelle Balance & ganzheitliche Begleitung
+            Premium Naturheilpraxis für hormonelle Balance & Wohlbefinden
           </div>
 
-          <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.05em] md:text-6xl lg:text-7xl">
-            Mehr Klarheit, mehr innere Ruhe und ein Weg, der zu Ihnen passt.
+          <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.96] tracking-[-0.055em] md:text-6xl lg:text-7xl">
+            Ein ruhiger, hochwertiger Ort für Balance, Klarheit und natürliche Begleitung.
           </h1>
 
-          <p className="section-text mt-6 max-w-2xl text-lg md:text-xl">
+          <p className="hero-subtle-text mt-6 max-w-2xl text-lg md:text-xl">
             In der Naturheilpraxis Erhard stehen Sie als Mensch im Mittelpunkt:
             mit fundierter Analyse, natürlicher Therapieorientierung und einer
-            Begleitung, die Vertrauen, Kompetenz und Ruhe spürbar verbindet.
+            Begleitung, die Vertrauen, Qualität und Ruhe spürbar verbindet.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -39,7 +42,7 @@ export function HeroSection() {
 
             <Link
               href="#leistungen"
-              className="rounded-full border border-white/15 bg-[rgba(245,239,229,0.12)] px-8 py-4 text-center text-sm font-semibold text-white transition hover:bg-[rgba(245,239,229,0.18)]"
+              className="rounded-full border border-white/30 bg-[rgba(248,243,235,0.18)] px-8 py-4 text-center text-sm font-semibold text-white transition hover:bg-[rgba(248,243,235,0.28)]"
             >
               Leistungen ansehen
             </Link>
@@ -47,18 +50,21 @@ export function HeroSection() {
 
           <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {trustItems.map((item) => (
-              <div key={item} className="hero-card rounded-2xl px-4 py-4 text-sm font-medium text-white">
+              <div
+                key={item}
+                className="hero-card rounded-2xl px-4 py-4 text-sm font-medium text-[#274046]"
+              >
                 {item}
               </div>
             ))}
           </div>
 
-          <div className="mt-10 max-w-xl rounded-[1.5rem] border border-white/12 bg-[rgba(245,239,229,0.08)] p-5 backdrop-blur">
-            <p className="text-sm uppercase tracking-[0.18em] text-[var(--accent)]">
+          <div className="luxury-panel mt-10 max-w-xl rounded-[1.6rem] p-6">
+            <p className="text-sm uppercase tracking-[0.18em] text-[#70848c]">
               Naturheilpraxis Erhard
             </p>
-            <p className="mt-3 text-sm leading-7 text-[var(--text-soft)]">
-              Für Menschen, die sich eine hochwertige, natürliche und seriöse
+            <p className="mt-3 text-sm leading-7 text-[#4f6672]">
+              Für Menschen, die sich eine hochwertige, ruhige und seriöse
               Begleitung bei hormonellen Themen, Erschöpfung und diffusen
               Beschwerden wünschen.
             </p>
@@ -73,7 +79,7 @@ export function HeroSection() {
               width={900}
               height={1100}
               priority
-              className="h-[580px] w-full object-cover"
+              className="h-[620px] w-full object-cover"
             />
           </div>
         </div>
